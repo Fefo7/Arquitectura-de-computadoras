@@ -15,7 +15,7 @@ mov dl, maxZ
 sub dl, ah
 mov dh, maxzm
 sub dh, dl
-mov al, dh
+mov ah, dh
 ret
 
 
@@ -34,7 +34,7 @@ continuar: inc bx
 buscarRango:
    mov ah, [bx]
    call ParseMinus
-  mov byte ptr[bx], al
+  mov byte ptr[bx], ah
   jmp continuar
 fin:ret
 
