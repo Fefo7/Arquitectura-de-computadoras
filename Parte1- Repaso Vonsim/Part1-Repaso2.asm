@@ -11,9 +11,9 @@ asig: mov res, 0
 jmp fin
 
 comprobar: 
-  cmp c,41h
-  jns isMayus
-  js asig
+  cmp c,5Ah
+  jns asig
+  js isMayus
 
 isMayus:
   mov res, 0ffH
