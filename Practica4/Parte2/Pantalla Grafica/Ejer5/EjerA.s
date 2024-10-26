@@ -8,7 +8,6 @@ DATA: .word32 0x10008
 .text
 lwu $s0, CONTROL($0)
 lwu $s1, DATA($0)
-
 lwu $t0, color($0) # cargo el color
 sw $t0, 0($s1)
 lbu $t1, Y($0)
@@ -23,7 +22,6 @@ loop:
     sd $t3, 0($s0)
     daddi $t2, $t2, 1
     bne $t4, $t2, loop
-
     daddi $t1, $t1, 1
     daddi $t2, $zero, 45 # reinicia X a 45 para la siguiente fila
     bne $t5, $t1, loop
