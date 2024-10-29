@@ -32,7 +32,7 @@ cant_vocales: daddi $t1, $0, 0 #contador de vocales
 
 es_vocal: daddi $a0, $0, str 
         daddi $sp,$sp, -8
-         sd $ra, 8($sp)
+         sd $ra, 0($sp)
          jal recibe
          beqz $v0, noEsvocal
          daddi $v0,$0,1
@@ -40,7 +40,7 @@ es_vocal: daddi $a0, $0, str
 noEsvocal: daddi $v0,$0,0
         j finV
 
-finV: ld $ra, 8($sp)
+finV: ld $ra, 0($sp)
      daddi $sp, $sp, 8
      jr $ra
 
